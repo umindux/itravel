@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+    <title>iTravel Web Ver1.0</title>
+    <!-- Local Libary Boottrap CSS only 不支援RWD功能-->
+    <!--<link rel="stylesheet" href="./bower_components/bootstrap-css-only/css/bootstrap.min.css" />-->
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
+    <!-- Optional theme -->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">-->
+    <!-- datepicker -->
+    <!--<link rel="stylesheet" href="../css/bootstrap-datetimepicker.min.css" media="screen">-->
+    <!--<link rel="stylesheet" href="/bower_components/boostrap/dist/js/boostrap.min.css" />-->
+    <!--<link rel="stylesheet" href="bower_components/boostrap/dist/css/bootstrap-theme.min.css" />-->
+    <!--<link rel="stylesheet" href="bower_components/smalot-bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" media="screen">-->
+    <!--<link rel="stylesheet" href="bower_components/jquery/dist/jquery.js"/>-->
+
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap-theme.css" />
+    <link rel="stylesheet" href="../bower_components/jquery/dist/jquery.js"/>
+    <link rel="stylesheet" href="../bower_components/smalot-bootstrap-datetimepicker/css/bootstrap-datetimepicker.css" media="screen">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    iTravel Web (Dev Ver 1.0)
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse" align="right">
+                <h3><span class="label label-default">Hi!會員 {$牛雞人} 已登入</span></h3>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- 使用nav bar必須要給一個margin-top 40px 的padding避免內容被蓋掉-->
+<div class="container" style="padding-top:70px">
+    <!-- 分頁面功能列 -->
+    <ul class="nav nav-tabs">
+        <li role="presentation" class="active"><a href="#">iTravel規劃功能(ITP)</a></li>
+        <li role="presentation"><a href="tlog400.html#">iTravel旅行紀錄規劃功能(TLOG)</a></li>
+        <li role="presentation"><a href="#">會員帳號管理(AA)</a></li>
+    </ul>
+    <!-- 規劃面板 分四個區塊編輯 -->
+    <div class="panel panel-default" style="height:450px">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                <strong>新增旅程</strong>
+            </h3>
+        </div>
+        <div class="panel-body">
+            <!-- 旅程資訊區塊 -->
+            <div class="panel panel-primaryt" style="height:450px">
+                <div class="panel-heading">
+                    <h4 class="panel-title">旅程資訊</h4>
+                </div>
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <label for="startDate" class="col-md-2 control-label">去程時間</label>
+                            <div class="input-group date form_datetime col-md-5" data-date="" data-date-format="dd MM yyyy - HH:ii p" data-link-field="startDate">
+                                <input class="form-control" size="16" type="text" value="" readonly>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                            </div>
+                            <input type="hidden" id="startDate" value="" /><br/>
+                        </td>
+                        <td>
+                            <label for="endDate" class="col-md-2 control-label">回程時間</label>
+                            <div class="input-group date form_datetime col-md-5" data-date="" data-date-format="dd MM yyyy - HH:ii p" data-link-field="endDate">
+                                <input class="form-control" size="16" type="text" value="" readonly>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                            </div>
+                            <input type="hidden" id="endDate" value="" /><br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label id="ticketPrice" class="col-md-2 control-label">機票費用</label>
+                            <input size="16" type="text" value="">
+                        </td>
+                        <td>
+                            <label id="chargeRate" class="col-md-2 control-label">外幣匯率</label>
+                            <input size="16" type="text" value="">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <p class="text-muted" align="center">Copyright © 2015 iTravel Tec Inc. All rights reserved.</p>
+    </div>
+</footer>
+<!-- resource 引用 -->
+<!--<script src="http://code.jquery.com/jquery.js"></script>-->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+<!--<script src="../jquery/jquery-1.8.3.min.js"></script>-->
+<!--<script src="../bootstrap/js/bootstrap.min.js"></script>-->
+<!-- datepicker resource 相依bootstrap & JQuery-->
+<!--<script type="text/javascript" src="../js/bootstrap-datetimepicker.js" charset="UTF-8"></script>-->
+<!--<link rel="stylesheet" href="bower_components/boostrap/dist/js/boostrap.min.css" />-->
+<!--<link rel="stylesheet" href="bower_components/boostrap/dist/css/bootstrap-theme.min.css" />-->
+<!--<link rel="stylesheet" href="bower_components/smalot-bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" media="screen">-->
+<!--<link rel="stylesheet" href="bower_components/jquery/dist/jquery.js"/>-->
+<link rel="stylesheet" href="../bower_components/smalot-bootstrap-datetimepicker/css/bootstrap-datetimepicker.css" media="screen">
+<script type="text/javascript">
+    //jQuery for datepicker
+    $('.form_datetime').datetimepicker({
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        forceParse: 0,
+        showMeridian: 1
+    });
+</script>
+<!-- datepicker resource 相依bootstrap & JQuery-->
+</body>
+</html>

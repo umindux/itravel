@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+    <title>iTravel Web Ver1.0</title>
+    <!-- Local Libary Boottrap CSS only 不支援RWD功能-->
+    <!--<link rel="stylesheet" href="./bower_components/bootstrap-css-only/css/bootstrap.min.css" />-->
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
+    <!-- Optional theme -->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">-->
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap-theme.css" />
+    <link rel="stylesheet" href="../bower_components/jquery/dist/jquery.js"/>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    iTravel Web (Dev Ver 1.0)
+                </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse" align="right">
+                <h3><span class="label label-default">Hi!會員 {$牛雞人} 已登入</span></h3>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- 使用nav bar必須要給一個margin-top 40px 的padding避免內容被蓋掉-->
+<div class="container" style="padding-top:70px">
+    <!-- 分頁面功能列 -->
+    <ul class="nav nav-tabs">
+        <li role="presentation" class="active"><a href="#">iTravel規劃功能(ITP)</a></li>
+        <li role="presentation"><a href="tlog400.html#">iTravel旅行紀錄規劃功能(TLOG)</a></li>
+        <li role="presentation"><a href="#">會員帳號管理(AA)</a></li>
+    </ul>
+    <div class="panel panel-default" style="height:450px">
+        <div class="panel-body">
+            <button type="button" class="btn btn-default" onclick="javascript:parent.location.href='itp200a.html#'">新增旅程</button>
+            <div class="panel panel-default" style="{margin-top:10px height:80%}">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <strong>我的旅程Listbox</strong>
+                    </h3>
+                </div>
+                <div class="panel-body" >
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>旅程名稱</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="vertical-align: middle">我的旅程1</td>
+                                <td align="right">
+                                    <button type="button" class="btn btn-default">
+                                        <span class="glyphicon glyphicon-list-alt" aria-hidden="true">規劃</span>
+                                    </button>
+                                    <button type="button" class="btn btn-danger">
+                                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="vertical-align: middle">我的旅程2</td>
+                                <td align="right">
+                                    <button type="button" class="btn btn-default">
+                                        <span class="glyphicon glyphicon-list-alt" aria-hidden="true">規劃</span>
+                                    </button>
+                                    <button type="button" class="btn btn-danger">
+                                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="vertical-align: middle">我的旅程3</td>
+                                <td align="right">
+                                    <button type="button" class="btn btn-default">
+                                        <span class="glyphicon glyphicon-list-alt" aria-hidden="true">規劃</span>
+                                    </button>
+                                    <button type="button" class="btn btn-danger">
+                                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="vertical-align: middle">我的旅程4</td>
+                                <td align="right">
+                                    <button type="button" class="btn btn-default">
+                                        <span class="glyphicon glyphicon-list-alt" aria-hidden="true">規劃</span>
+                                    </button>
+                                    <button type="button" class="btn btn-danger">
+                                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="vertical-align: middle">我的旅程5</td>
+                                <td align="right">
+                                    <button type="button" class="btn btn-default">
+                                        <span class="glyphicon glyphicon-list-alt" aria-hidden="true">規劃</span>
+                                    </button>
+                                    <button type="button" class="btn btn-danger">
+                                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <p class="text-muted" align="center">Copyright © 2015 iTravel Tec Inc. All rights reserved.</p>
+    </div>
+</footer>
+<!-- resource 引用 -->
+<!--<script src="http://code.jquery.com/jquery.js"></script>-->
+<!--<link rel="stylesheet" href="bower_components/jquery/dist/jquery.js"/>-->
+<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+<!--<link rel="stylesheet" href="../bower_components/bootstrap/dist/js/bootstrap.min.js" />-->
+<!--<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap-theme.css" />-->
+<!--<link rel="stylesheet" href="../bower_components/jquery/dist/jquery.js"/>-->
+</body>
+</html>

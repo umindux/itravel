@@ -1,0 +1,12 @@
+{
+  "name": "itravel",
+  "dependencies": {
+    "angular": "1.2 - 1.4",
+    "angular-resource": "~1.4.0",
+    "bootstrap-css-only": "~3.2.0",
+    "exif-js": "",
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.5",
+    "smalot-bootstrap-datetimepicker": "~2.3.5"
+  }
+}
